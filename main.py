@@ -8,6 +8,8 @@ if __name__ == '__main__':
     pd.set_option('display.max_columns', None)
     print(st.secrets['test_secret'])
     print("p")
+    st.text(st.secrets['test_secret'])
+    brand_name = st.text_input("Enter a brand name: ", 'ancestry')
 #     redshift_username = st.secrets['redshift_username']
 #     redshift_password = st.secrets['redshift_password']
 #     conn = redshift_connector.connect(
