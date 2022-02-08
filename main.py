@@ -6,6 +6,8 @@ from st_aggrid import AgGrid
 
 if __name__ == '__main__':
     pd.set_option('display.max_columns', None)
+    print(st.secrets['test_secret'])
+    print("p")
     redshift_username = st.secrets['redshift_username']
     redshift_password = st.secrets['redshift_password']
     conn = redshift_connector.connect(
@@ -18,7 +20,6 @@ if __name__ == '__main__':
     # st.write("Enter a brand name: ")
     #brand_name = 'ancestry'
     brand_name = st.text_input("Enter a brand name: ", 'ancestry')
-    print(st.secrets['test_secret'])
     st.text(st.secrets['test_secret'])
     query = f'''
 with website_app_names as (
